@@ -1,9 +1,16 @@
-import React from 'react'
-
+import React, { useState, useEffect } from "react";
+import { apiGetCategories } from "../apis/app";
+// import { NavLink } from "react-router-dom";
 const Sidebar = () => {
-  return (
-    <div>Sidebar</div>
-  )
-}
+  const [categories, setCategories] = useState(null)
+  const fetchCategories = async () => {
+    const response = await apiGetCategories();
+    if(response.success) setCategories(response.prodCategories)
+  };
+  useEffect(() => {
+    fetchCategories;
+  }, []);
+  return <div>Sidebar</div>;
+};
 
-export default Sidebar
+export default Sidebar;
