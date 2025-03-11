@@ -4,13 +4,14 @@ import { Login, Home, Public } from "./pages/public";
 import path from './ultils/path';
 import {getCategories} from './store/asynActions'
 import {useDispatch} from 'react-redux'
+
 function App() {
   const dispatch = useDispatch();
   useEffect(()=>{
     dispatch(getCategories())
   },[])
   return (
-    <div className="min-h-screen font-main">
+    <div className="min-h-screen overflow-y-auto font-main">
       <Routes>
         <Route path={path.PUBLIC} element={<Public />}>
           <Route path={path.HOME} element={<Home />} />

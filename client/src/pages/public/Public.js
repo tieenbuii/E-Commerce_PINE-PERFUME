@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom"; // component con public
 import { Header, Navigation } from "../../components";
 const Public = () => {
   return (

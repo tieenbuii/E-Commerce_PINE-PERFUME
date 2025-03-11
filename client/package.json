@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.1",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "axios": "^1.8.2",
     "cra-template-redux": "2.0.0",
     "dotenv": "^16.4.7",
@@ -15,7 +16,9 @@
     "react-router-dom": "^7.3.0",
     "react-scripts": "5.0.1",
     "react-toastify": "^11.0.5",
-    "redux-persist": "^6.0.0"
+    "redux-persist": "^6.0.0",
+    "slick-carousel": "^1.8.1",
+    "slick-slider": "^1.8.2"
   },
   "scripts": {
     "start": "react-scripts start",
