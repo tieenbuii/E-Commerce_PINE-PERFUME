@@ -5,10 +5,13 @@ const cors = require('cors');
 const dbConnect = require('./config/dbconnect');
 const initRoutes = require('./routes/indexRoutes');
 const { init } = require('./models/userModel');
+const cookieParser = require('cookie-parser');
 
 const port = process.env.PORT || 3000
 
 app.use(express.json());
+
+app.use(cookieParser());
 
 app.use(cors());
 
