@@ -1,0 +1,23 @@
+const mongoose = require('mongoose'); // Erase if already required
+
+// Declare the Schema of the Mongo model
+var brandSchema = new mongoose.Schema({
+    title: {
+        type:String,
+        required:true,
+        unique:true,
+    },
+    images: {
+        type: Array
+    },
+    status: { // Trạng thái
+        type: String,
+        enum: ['active', 'inactive'],
+        default: 'active'
+    },
+}, {
+    timestamps: true
+});
+
+//Export the model
+module.exports = mongoose.model('Brand', brandSchema);
