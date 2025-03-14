@@ -7,7 +7,7 @@ const AdminLayout = () => {
    if(!isLoggedIn || !current || +current.role !== 1945)return <Navigate to={`/${path.LOGIN}`} replace={true}/>
   return (
     <div>
-      <div>AdminLayout</div>
+      <div>AdminLayout 123</div>
       <div>
         <Outlet/>
       </div>
